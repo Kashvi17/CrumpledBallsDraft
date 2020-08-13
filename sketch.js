@@ -28,10 +28,16 @@ function setup() {
 	//create paper
 	paper = new Paper(150,630,40,40);
 
-	Engine.run(engine);
-  
+	//create dustbin
+	box1 = new Dustbin(400,633,200,20);
+	box2 = new Dustbin(490, 590, 20, 100);
+	box3 = new Dustbin(310, 590, 20, 100);
+/*
+	box1 = Bodies.rectangle(400, ground.y-17, 200, 20, {isStatic:true} );
+    box2 = Bodies.rectangle(490, ground.y-60, 20, 100, {isStatic:true} );
+    box3 = Bodies.rectangle(310, ground.y-60, 20, 100 , {isStatic:true} );
+*/	
 }
-
 
 function draw() {
   rectMode(CENTER);
@@ -39,6 +45,9 @@ function draw() {
   //ellipseMode(RADIUS);
   //ellipse(paper.position.x, paper.position.y, 50, 50);
   paper.display();
+  box1.display();
+  box2.display();
+  box3.display();
 
   drawSprites();
  
