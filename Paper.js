@@ -1,5 +1,5 @@
 class Paper {
-    constructor() {
+    constructor(x,y,r) {
       var options = {
           isStatic : false,
           restitution:0.3,
@@ -7,17 +7,20 @@ class Paper {
           density:1.2
       }
       
-      this.width = 50;
-      this.height = 50;
-      this.body = Bodies.circle(200, 200, 50, options); 
+      this.x = x;
+      this.y = y;
+      this.r = r;
+      this.body = Bodies.circle(this.x, this.y, this.r, options); 
       
       World.add(world, this.body);
     }
     display(){
+      var paperpos = this.body.position;
       push();
+      translate(paperpos.x, paperpos.y);
       rectMode(CENTER);
       fill("blue");
-      ellipse(170,610,50,50);
+      ellipse(0,0,this.r,this.r);
       //Matter.Bodies.circle(0, 0, 20);
       
       pop();

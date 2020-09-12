@@ -26,10 +26,10 @@ function setup() {
 	World.add(world, ground);
 
 	//create paper
-	paper = new Paper(150,630,40,40);
+	paper = new Paper(150,630,40);
 
 	//create dustbin
-	box1 = new Dustbin(400,633,200,20);
+	box1 = new Dustbin(400, 633, 20, 20);
 	box2 = new Dustbin(490, 590, 20, 100);
 	box3 = new Dustbin(310, 590, 20, 100);
 /*
